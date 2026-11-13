@@ -7,13 +7,7 @@ const projects = [
     description:
       "A service marketplace connecting customers with trusted local service providers. Includes separate customer and provider mobile applications and a React admin dashboard for managing the platform.",
     technologies: ["Flutter", "React", "Spring Boot", "MySQL"],
-    image: (
-      <img
-        src="/charuni-portfolio/images/skilllink.png"
-        alt="SkillLink"
-        style={{ width: "100%", height: "200px", objectFit: "cover" }}
-      />
-    ),
+    image: "images/skilllink.png",
     links: [
       {
         label: "Mobile Application",
@@ -36,7 +30,7 @@ const projects = [
     description:
       "A web-based system designed to help users manage and book appointments at government hospitals.",
     technologies: ["HTML", "CSS", "JavaScript", "Python"],
-    image: "/images/hospital-booking.png",
+    image: "images/hospital-booking.png",
     links: [
       {
         label: "GitHub",
@@ -58,7 +52,7 @@ const projects = [
       "ESP32",
       "MQTT",
     ],
-    image: "/images/solariq.png",
+    image: "images/solariq.png",
     links: [
       {
         label: "GitHub",
@@ -73,7 +67,7 @@ const projects = [
     description:
       "An application designed to support human-elephant conflict awareness through map-based alerts, electric fence updates, incident reporting, and injured elephant reporting.",
     technologies: [],
-    image: "/images/hec.png",
+    image: "images/hec.png",
     links: [
       {
         label: "Frontend Repository",
@@ -92,7 +86,7 @@ const projects = [
     description:
       "A web-based Learning Management System developed using HTML, CSS, and JavaScript.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "/images/lms.png",
+    image: "images/lms.png",
     links: [],
   },
   {
@@ -108,7 +102,7 @@ const projects = [
       "JavaScript",
       "Tailwind CSS",
     ],
-    image: "/images/royal-invites.png",
+    image: "images/royal-invites.png",
     links: [
       {
         label: "GitHub",
@@ -127,7 +121,7 @@ const projects = [
     description:
       "A responsive restaurant website developed using React and JavaScript to explore modern frontend development.",
     technologies: ["React", "JavaScript", "CSS"],
-    image: "/images/restaurant.png",
+    image: "images/restaurant.png",
     links: [
       {
         label: "GitHub",
@@ -142,7 +136,7 @@ const projects = [
     description:
       "A GPA calculator designed to help university students calculate their academic GPA.",
     technologies: ["HTML", "CSS", "JavaScript", "Python"],
-    image: "/images/gpa-calculator.png",
+    image: "images/gpa-calculator.png",
     links: [
       {
         label: "GitHub",
@@ -172,7 +166,7 @@ function Projects() {
             <article className="project-card" key={project.title}>
               <div className="project-image">
                 <img
-                  src={`${import.meta.env.BASE_URL}${project.image.replace(/^\//, "")}`}
+                  src={`${import.meta.env.BASE_URL}${project.image}`}
                   alt={`${project.title} screenshot`}
                   onError={(event) => {
                     event.currentTarget.style.display = "none";

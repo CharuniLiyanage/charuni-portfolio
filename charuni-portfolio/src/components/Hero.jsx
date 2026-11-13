@@ -5,6 +5,7 @@ import {
   ArrowDown,
   Download,
   MessageCircle,
+  Linkedin,
 } from "lucide-react";
 
 function Hero() {
@@ -31,7 +32,7 @@ function Hero() {
           </a>
 
           <a
-            href="/Charuni-Hansika-CV.pdf"
+            href={`${import.meta.env.BASE_URL}Charuni-Hansika-CV.pdf`}
             className="btn btn-outline"
             target="_blank"
             rel="noreferrer"
@@ -58,7 +59,7 @@ function Hero() {
             aria-label="LinkedIn"
             title="LinkedIn"
           >
-            <Code2 />
+            <Linkedin />
           </a>
 
           <a
@@ -83,8 +84,12 @@ function Hero() {
 
       <div className="hero-image">
         <div className="image-frame">
-          <img src="/images/profile.png" alt="Charuni Hansika" />
+          <img
+            src={`${import.meta.env.BASE_URL}images/profile.png`}
+            alt="Charuni Hansika"
+          />
         </div>
+
         <div className="image-decoration"></div>
       </div>
     </section>
