@@ -17,6 +17,7 @@ function Hero() {
         </h1>
 
         <h2>Computer Science Undergraduate</h2>
+        <h4>Aspiring Software Engineer</h4><br></br>
 
         <p className="hero-description">
           Passionate about building modern web and mobile applications.
