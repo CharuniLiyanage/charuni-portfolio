@@ -7,7 +7,13 @@ const projects = [
     description:
       "A service marketplace connecting customers with trusted local service providers. Includes separate customer and provider mobile applications and a React admin dashboard for managing the platform.",
     technologies: ["Flutter", "React", "Spring Boot", "MySQL"],
-    image: "/images/skilllink.png",
+    image: (
+      <img
+        src="/charuni-portfolio/images/skilllink.png"
+        alt="SkillLink"
+        style={{ width: "100%", height: "200px", objectFit: "cover" }}
+      />
+    ),
     links: [
       {
         label: "Mobile Application",
