@@ -166,7 +166,7 @@ function Projects() {
             <article className="project-card" key={project.title}>
               <div className="project-image">
                 <img
-                  src={project.image}
+                  src={`${import.meta.env.BASE_URL}${project.image.replace(/^\//, "")}`}
                   alt={`${project.title} screenshot`}
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
