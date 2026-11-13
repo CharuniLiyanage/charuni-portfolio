@@ -1,5 +1,5 @@
 
-import { Award } from "lucide-react";
+import { Award, ExternalLink } from "lucide-react";
 
 const certifications = [
   {
@@ -46,13 +46,18 @@ const certifications = [
 
 function Certifications() {
   return (
-    <section className="section certifications-section" id="certifications">
+    <section
+      className="section certifications-section"
+      id="certifications"
+    >
       <div className="container">
         <div className="section-heading">
           <p className="section-subtitle">MY ACHIEVEMENTS</p>
+
           <h2>
             Certifications & <span className="accent">Courses</span>
           </h2>
+
           <p className="certifications-intro">
             Professional courses and certifications I have completed
             to improve my technical knowledge and skills.
@@ -68,7 +73,10 @@ function Certifications() {
 
               <div className="certification-details">
                 <h3>{cert.name}</h3>
-                <p className="certification-issuer">{cert.issuer}</p>
+
+                <p className="certification-issuer">
+                  {cert.issuer}
+                </p>
 
                 {cert.date && (
                   <span className="certification-date">
@@ -78,6 +86,22 @@ function Certifications() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="certifications-footer">
+          <p>
+            Want to explore all my certifications and achievements?
+          </p>
+
+          <a
+            href="https://www.linkedin.com/in/charuni-hansika/details/certifications/"
+            target="_blank"
+            rel="noreferrer"
+            className="certifications-link"
+          >
+            View All Certifications on LinkedIn
+            <ExternalLink size={17} />
+          </a>
         </div>
       </div>
     </section>
