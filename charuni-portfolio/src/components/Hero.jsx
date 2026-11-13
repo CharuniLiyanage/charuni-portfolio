@@ -1,4 +1,3 @@
-
 import {
   Code2,
   Mail,
@@ -57,8 +56,9 @@ function Hero() {
             rel="noreferrer"
             aria-label="LinkedIn"
             title="LinkedIn"
+            className="linkedin-icon"
           >
-            <Code2 />
+            in
           </a>
 
           <a
