@@ -21,6 +21,10 @@ const projects = [
         label: "GitHub",
         url: "https://github.com/SkillLink-Mobile-Application/SkillLink",
       },
+      {
+        label: "LinkedIn Video Demo",
+        url: "https://lnkd.in/p/gnF9zkyQ",
+      },
     ],
   },
   {
@@ -35,6 +39,10 @@ const projects = [
       {
         label: "GitHub",
         url: "https://github.com/CharuniLiyanage/Government-Hospital-Appointment-Booking-System",
+      },
+      {
+        label: "LinkedIn Video Demo",
+        url: "https://lnkd.in/p/gesG2mGb",
       },
     ],
   },
@@ -77,6 +85,10 @@ const projects = [
         label: "Backend Repository",
         url: "https://github.com/Pasindu2025/elephant-backend",
       },
+      {
+        label: "LinkedIn Images",
+        url: "https://lnkd.in/p/gQes8TeQ",
+      },
     ],
   },
   {
@@ -87,7 +99,12 @@ const projects = [
       "A university group project focused on developing a web-based Learning Management System using HTML, CSS, and JavaScript.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "images/lms.png",
-    links: [],
+    links: [
+      {
+        label: "LinkedIn Video Demo",
+        url: "https://lnkd.in/p/gYMe5aVa",
+      },
+    ],
   },
   {
     title: "Royal Invites",
@@ -112,6 +129,10 @@ const projects = [
         label: "Live Demo",
         url: "https://royalinvites.infinityfreeapp.com/",
       },
+      {
+        label: "LinkedIn Video Demo",
+        url: "https://lnkd.in/p/gy3bGk2z",
+      },
     ],
   },
   {
@@ -127,6 +148,10 @@ const projects = [
         label: "GitHub",
         url: "https://github.com/CharuniLiyanage/restaurant-app",
       },
+      {
+        label: "LinkedIn Video Demo",
+        url: "https://lnkd.in/p/g4YrrWJG",
+      },
     ],
   },
   {
@@ -141,6 +166,10 @@ const projects = [
       {
         label: "GitHub",
         url: "https://github.com/CharuniLiyanage/University-GPA-Calculator",
+      },
+      {
+        label: "LinkedIn Video Demo",
+        url: "https://lnkd.in/p/greR4F9E",
       },
     ],
   },
