@@ -410,6 +410,9 @@ a {
 
 /* PROJECTS */
 
+
+/* PROJECTS */
+
 .projects-section {
   background: #0b0f19;
 }
@@ -443,7 +446,7 @@ a {
   border-color: #f28c28;
 }
 
-/* Fixed image size for all project cards */
+/* PROJECT IMAGE */
 
 .project-image {
   width: 100%;
@@ -477,6 +480,8 @@ a {
   font-weight: 600;
 }
 
+/* PROJECT STATUS */
+
 .project-status {
   position: absolute;
   top: 14px;
@@ -489,6 +494,8 @@ a {
   font-size: 11px;
   font-weight: 700;
 }
+
+/* PROJECT DETAILS */
 
 .project-details {
   display: flex;
@@ -518,6 +525,8 @@ a {
   margin-bottom: 15px;
 }
 
+/* TECHNOLOGY TAGS */
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -532,6 +541,8 @@ a {
   border-radius: 4px;
   font-size: 11px;
 }
+
+/* PROJECT LINKS */
 
 .project-links {
   display: flex;
@@ -562,75 +573,9 @@ a {
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 75px;
-    left: 0;
-    width: 100%;
-    background: #101624;
-    padding: 25px;
-    flex-direction: column;
-    gap: 22px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hero {
-    flex-direction: column-reverse;
-    text-align: center;
-    gap: 45px;
-  }
-
-  .hero-image {
-    width: 260px;
-    height: 310px;
-  }
-
-  .hero-buttons,
-  .social-links {
-    justify-content: center;
-  }
-
-  .hero-description {
-    margin: auto;
-  }
-
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
   .projects-grid {
     grid-template-columns: 1fr;
-  }
-
-  .section {
-    padding: 70px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 38px;
-  }
-
-  .hero-content h2 {
-    font-size: 18px;
-  }
-
-  .section-heading h2 {
-    font-size: 29px;
+    gap: 22px;
   }
 
   .project-details {
@@ -642,6 +587,18 @@ a {
   }
 }
 
+@media (max-width: 480px) {
+  .project-status {
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    padding: 6px 9px;
+  }
+
+  .project-links {
+    gap: 12px;
+  }
+}
 
 /* EXPERIENCE SECTION */
 

@@ -5,7 +5,7 @@ const projects = [
     category: "Mobile Applications & Admin Web",
     status: "Completed & Deployed",
     description:
-      "A service marketplace connecting customers with trusted local service providers. Includes separate customer and provider mobile applications and a React admin dashboard for managing the platform.",
+      "A personal software development project featuring separate customer and provider mobile applications and a React admin dashboard. Connects customers with trusted local service providers.",
     technologies: ["Flutter", "React", "Spring Boot", "MySQL"],
     image: "images/skilllink.png",
     links: [
@@ -26,9 +26,9 @@ const projects = [
   {
     title: "Government Hospital Appointment Booking System",
     category: "Web Application",
-    status: "University Project",
+    status: "Completed",
     description:
-      "A web-based system designed to help users manage and book appointments at government hospitals.",
+      "A personal project developed to improve my software development skills. A web-based system designed to help users manage and book appointments at government hospitals.",
     technologies: ["HTML", "CSS", "JavaScript", "Python"],
     image: "images/hospital-booking.png",
     links: [
@@ -43,7 +43,7 @@ const projects = [
     category: "Final Year Group Project",
     status: "Ongoing",
     description:
-      "A smart solar energy management system featuring solar planning, cost estimation, and real-time energy monitoring.",
+      "A final-year university group project focused on developing a smart solar energy management system with solar planning, cost estimation, and real-time energy monitoring.",
     technologies: [
       "React",
       "Flutter",
@@ -65,7 +65,7 @@ const projects = [
     category: "University OOP Group Project",
     status: "Group Project",
     description:
-      "An application designed to support human-elephant conflict awareness through map-based alerts, electric fence updates, incident reporting, and injured elephant reporting.",
+      "A university group project developed to support human-elephant conflict awareness through map-based alerts, electric fence updates, incident reporting, and injured elephant reporting.",
     technologies: [],
     image: "images/hec.png",
     links: [
@@ -84,7 +84,7 @@ const projects = [
     category: "Web Application",
     status: "Group Project",
     description:
-      "A web-based Learning Management System developed using HTML, CSS, and JavaScript.",
+      "A university group project focused on developing a web-based Learning Management System using HTML, CSS, and JavaScript.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "images/lms.png",
     links: [],
@@ -94,7 +94,7 @@ const projects = [
     category: "Wedding Invitation Maker",
     status: "Completed",
     description:
-      "A web application for creating personalized digital wedding invitations with downloadable PNG and PDF designs.",
+      "A personal web development project for creating personalized digital wedding invitations with downloadable PNG and PDF designs.",
     technologies: [
       "PHP",
       "Laravel",
@@ -119,7 +119,7 @@ const projects = [
     category: "Frontend Web Application",
     status: "Completed",
     description:
-      "A responsive restaurant website developed using React and JavaScript to explore modern frontend development.",
+      "A personal frontend development project built with React and JavaScript to explore responsive web design and modern user interfaces.",
     technologies: ["React", "JavaScript", "CSS"],
     image: "images/restaurant.png",
     links: [
@@ -132,9 +132,9 @@ const projects = [
   {
     title: "University GPA Calculator",
     category: "Web Application",
-    status: "University Project",
+    status: "Completed",
     description:
-      "A GPA calculator designed to help university students calculate their academic GPA.",
+      "A personal project developed to improve my programming and problem-solving skills. Helps university students calculate their academic GPA.",
     technologies: ["HTML", "CSS", "JavaScript", "Python"],
     image: "images/gpa-calculator.png",
     links: [
@@ -177,7 +177,13 @@ function Projects() {
                   {project.title}
                 </div>
 
-                <span className="project-status">
+                <span
+                  className={`project-status ${
+                    project.status === "Ongoing"
+                      ? "status-ongoing"
+                      : "status-completed"
+                  }`}
+                >
                   {project.status}
                 </span>
               </div>
