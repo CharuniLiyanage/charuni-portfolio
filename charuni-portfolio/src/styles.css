@@ -949,7 +949,9 @@ a {
 }
 
 
+
 /* CONTACT SECTION */
+
 .contact-section {
   background: #0c1220;
 }
@@ -969,6 +971,8 @@ a {
   margin: 40px auto;
 }
 
+/* CONTACT CARDS */
+
 .contact-card {
   display: flex;
   align-items: center;
@@ -986,6 +990,8 @@ a {
   border-color: #f28c28;
 }
 
+/* CONTACT ICONS */
+
 .contact-icon {
   min-width: 50px;
   height: 50px;
@@ -996,6 +1002,24 @@ a {
   background: rgba(242, 140, 40, 0.12);
   border-radius: 10px;
 }
+
+/* LINKEDIN TEXT ICON */
+
+.linkedin-text-icon {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f28c28;
+  border: 2px solid #f28c28;
+  border-radius: 4px;
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* CONTACT CARD TEXT */
 
 .contact-card h3 {
   color: #ffffff;
@@ -1008,6 +1032,8 @@ a {
   font-size: 13px;
   word-break: break-word;
 }
+
+/* CONTACT CTA */
 
 .contact-cta {
   max-width: 850px;
@@ -1035,6 +1061,8 @@ a {
   gap: 10px;
   text-decoration: none;
 }
+
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 768px) {
   .contact-content {

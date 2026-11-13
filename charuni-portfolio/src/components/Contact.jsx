@@ -26,7 +26,10 @@ function Contact() {
         </div>
 
         <div className="contact-content">
-          <a href="mailto:hansikachl721@gmail.com" className="contact-card">
+          <a
+            href="mailto:hansikachl721@gmail.com"
+            className="contact-card"
+          >
             <div className="contact-icon">
               <Mail size={25} />
             </div>
@@ -58,7 +61,7 @@ function Contact() {
             className="contact-card"
           >
             <div className="contact-icon">
-                <Code2 size={25} />
+              <span className="linkedin-text-icon">in</span>
             </div>
             <div>
               <h3>LinkedIn</h3>
