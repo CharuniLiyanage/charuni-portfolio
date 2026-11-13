@@ -5,7 +5,6 @@ import {
   ArrowDown,
   Download,
   MessageCircle,
-  Linkedin,
 } from "lucide-react";
 
 function Hero() {
@@ -59,7 +58,7 @@ function Hero() {
             aria-label="LinkedIn"
             title="LinkedIn"
           >
-            <Linkedin />
+            <Code2 />
           </a>
 
           <a
