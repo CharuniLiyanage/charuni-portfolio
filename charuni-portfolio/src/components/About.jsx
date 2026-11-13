@@ -79,8 +79,8 @@ function About() {
             <BriefcaseBusiness />
             <div>
               <h4>Career Goal</h4>
-              <p>Software Engineering Intern</p>
-              <span>Available from February 2027</span>
+              <p>Aspiring Software Engineer</p>
+              <span>Available for Internships from February 2027</span>
             </div>
           </div>
         </div>
