@@ -4,6 +4,7 @@ const projects = [
     title: "SkillLink",
     category: "Mobile Applications & Admin Web",
     status: "Completed & Deployed",
+    statusType: "completed",
     description:
       "A personal software development project featuring separate customer and provider mobile applications and a React admin dashboard. Connects customers with trusted local service providers.",
     technologies: ["Flutter", "React", "Spring Boot", "MySQL"],
@@ -31,6 +32,7 @@ const projects = [
     title: "Government Hospital Appointment Booking System",
     category: "Web Application",
     status: "Completed",
+    statusType: "completed",
     description:
       "A personal project developed to improve my software development skills. A web-based system designed to help users manage and book appointments at government hospitals.",
     technologies: ["HTML", "CSS", "JavaScript", "Python"],
@@ -50,6 +52,7 @@ const projects = [
     title: "SolarIQ",
     category: "Final Year Group Project",
     status: "Ongoing",
+    statusType: "ongoing",
     description:
       "A final-year university group project focused on developing a smart solar energy management system with solar planning, cost estimation, and real-time energy monitoring.",
     technologies: [
@@ -70,11 +73,12 @@ const projects = [
   },
   {
     title: "HEC Awareness and Alert Application",
-    category: "University OOP Group Project",
+    category: "Desktop Application | University OOP Group Project",
     status: "Group Project",
+    statusType: "group",
     description:
-      "A university group project developed to support human-elephant conflict awareness through map-based alerts, electric fence updates, incident reporting, and injured elephant reporting.",
-    technologies: [],
+    "A university group project developed as a desktop application to support human-elephant conflict awareness through map-based alerts, electric fence updates, incident reporting, and injured elephant reporting.",
+    technologies: ["Java Swing", "SQL", "Spring Boot"],
     image: "images/hec.png",
     links: [
       {
@@ -95,6 +99,7 @@ const projects = [
     title: "Learning Management System (LMS)",
     category: "Web Application",
     status: "Group Project",
+    statusType: "group",
     description:
       "A university group project focused on developing a web-based Learning Management System using HTML, CSS, and JavaScript.",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -110,6 +115,7 @@ const projects = [
     title: "Royal Invites",
     category: "Wedding Invitation Maker",
     status: "Completed",
+    statusType: "completed",
     description:
       "A personal web development project for creating personalized digital wedding invitations with downloadable PNG and PDF designs.",
     technologies: [
@@ -139,6 +145,7 @@ const projects = [
     title: "Restaurant App",
     category: "Frontend Web Application",
     status: "Completed",
+    statusType: "completed",
     description:
       "A personal frontend development project built with React and JavaScript to explore responsive web design and modern user interfaces.",
     technologies: ["React", "JavaScript", "CSS"],
@@ -158,6 +165,7 @@ const projects = [
     title: "University GPA Calculator",
     category: "Web Application",
     status: "Completed",
+    statusType: "completed",
     description:
       "A personal project developed to improve my programming and problem-solving skills. Helps university students calculate their academic GPA.",
     technologies: ["HTML", "CSS", "JavaScript", "Python"],
@@ -181,9 +189,11 @@ function Projects() {
       <div className="container">
         <div className="section-heading">
           <p className="section-subtitle">MY RECENT WORK</p>
+
           <h2>
             Featured <span className="accent">Projects</span>
           </h2>
+
           <p className="projects-intro">
             A selection of projects I've developed while learning
             and exploring software development.
@@ -192,11 +202,18 @@ function Projects() {
 
         <div className="projects-grid">
           {projects.map((project) => (
-            <article className="project-card" key={project.title}>
+            <article
+              className={`project-card ${
+                project.featured ? "featured-project" : ""
+              }`}
+              key={project.title}
+            >
               <div className="project-image">
                 <img
                   src={`${import.meta.env.BASE_URL}${project.image}`}
                   alt={`${project.title} screenshot`}
+                  loading="lazy"
+                  decoding="async"
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
                   }}
@@ -207,11 +224,7 @@ function Projects() {
                 </div>
 
                 <span
-                  className={`project-status ${
-                    project.status === "Ongoing"
-                      ? "status-ongoing"
-                      : "status-completed"
-                  }`}
+                  className={`project-status status-${project.statusType}`}
                 >
                   {project.status}
                 </span>
@@ -239,22 +252,16 @@ function Projects() {
                 )}
 
                 <div className="project-links">
-                  {project.links.length > 0 ? (
-                    project.links.map((link) => (
-                      <a
-                        key={link.label}
-                        href={link.url}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {link.label} ↗
-                      </a>
-                    ))
-                  ) : (
-                    <span className="repository-label">
-                      GitHub repository not available
-                    </span>
-                  )}
+                  {project.links.map((link) => (
+                    <a
+                      key={`${link.label}-${link.url}`}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.label} <span>↗</span>
+                    </a>
+                  ))}
                 </div>
               </div>
             </article>

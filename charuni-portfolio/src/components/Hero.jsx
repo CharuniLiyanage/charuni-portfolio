@@ -1,3 +1,6 @@
+
+import { useEffect, useRef, useState } from "react";
+
 import {
   Code2,
   Mail,
@@ -7,8 +10,107 @@ import {
 } from "lucide-react";
 
 function Hero() {
+  const titles = [
+    "Aspiring Software Engineer",
+  ];
+
+  const [displayText, setDisplayText] = useState("");
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const heroRef = useRef(null);
+
+  // Typing animation
+  useEffect(() => {
+    const currentTitle = titles[titleIndex];
+
+    let delay = isDeleting ? 45 : 90;
+
+    if (!isDeleting && displayText === currentTitle) {
+      delay = 1600;
+    } else if (isDeleting && displayText === "") {
+      delay = 400;
+    }
+
+    const timer = setTimeout(() => {
+      if (!isDeleting && displayText === currentTitle) {
+        setIsDeleting(true);
+      } else if (isDeleting && displayText === "") {
+        setIsDeleting(false);
+        setTitleIndex((previous) => (previous + 1) % titles.length);
+      } else {
+        setDisplayText(
+          currentTitle.substring(
+            0,
+            displayText.length + (isDeleting ? -1 : 1)
+          )
+        );
+      }
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [displayText, isDeleting, titleIndex]);
+
+  // Scroll reveal animation
+  useEffect(() => {
+    const elements = document.querySelectorAll(
+      ".hero-content, .hero-image, .section"
+    );
+
+    elements.forEach((element) => {
+      element.classList.add("reveal");
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+      }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Mouse-follow orange glow
+  const handlePointerMove = (event) => {
+    if (window.matchMedia("(hover: none)").matches) return;
+
+    const rect = heroRef.current.getBoundingClientRect();
+
+    heroRef.current.style.setProperty(
+      "--mouse-x",
+      `${event.clientX - rect.left}px`
+    );
+
+    heroRef.current.style.setProperty(
+      "--mouse-y",
+      `${event.clientY - rect.top}px`
+    );
+  };
+
   return (
-    <section className="hero container" id="home">
+    <section
+      className="hero container"
+      id="home"
+      ref={heroRef}
+      onPointerMove={handlePointerMove}
+    >
+      {/* Floating background elements */}
+      <div className="hero-floating-shapes" aria-hidden="true">
+        <span className="floating-shape shape-one"></span>
+        <span className="floating-shape shape-two"></span>
+        <span className="floating-shape shape-three"></span>
+      </div>
+
       <div className="hero-content">
         <p className="hero-greeting">HELLO, I'M</p>
 
@@ -17,7 +119,15 @@ function Hero() {
         </h1>
 
         <h2>Computer Science Undergraduate</h2>
-        <h4>Aspiring Software Engineer</h4><br></br>
+
+        <h4 className="typing-heading">
+          <span className="typing-text">{displayText}</span>
+          <span className="typing-cursor">|</span>
+        </h4>
+
+        <p className="internship-status">
+          Available for Software Engineering Internship – February 2027
+        </p>
 
         <p className="hero-description">
           Passionate about building modern web and mobile applications.
