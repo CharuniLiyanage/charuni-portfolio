@@ -6,7 +6,7 @@ const education = [
     icon: GraduationCap,
     qualification: "Bachelor of Computer Science (BCS)",
     institution: "University of Ruhuna",
-    period: "2023 – 2027",
+    period: "September 2024 – Present",
     description: "Currently pursuing an undergraduate degree in Computer Science.",
     result: "Undergraduate",
   },

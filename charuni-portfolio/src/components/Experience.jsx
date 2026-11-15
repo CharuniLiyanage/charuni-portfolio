@@ -10,15 +10,6 @@ const experiences = [
       "Completed a trainee placement at People's Bank, gaining practical experience in a professional workplace environment.",
   },
   {
-    type: "Project Experience",
-    title: "Map and Alert Module Developer",
-    organization: "HEC Awareness and Alert Application",
-    location: "University Group Project",
-    period: "",
-    description:
-      "Worked on the map and alert module of a Human-Elephant Conflict awareness application, supporting electric fence updates, incident reporting, and injured elephant reporting.",
-  },
-  {
     type: "Open Source Program",
     title: "Selected Participant – SSoC Season 5",
     organization: "Social Summer of Code",
