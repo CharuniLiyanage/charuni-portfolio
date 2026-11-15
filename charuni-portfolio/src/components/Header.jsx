@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,14 +20,21 @@ function Header() {
     <header className="header">
       <nav className="navbar container">
         <a href="#home" className="logo">
-          <Code2 size={25} />
-          <span>Charuni<span className="accent">.</span></span>
+          <img
+            src="logo.png"
+            alt="Charuni Logo"
+            className="logo-image"
+          />
+          <span>
+            Charuni<span className="accent">.</span>
+          </span>
         </a>
 
         <button
           className="menu-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
         >
           {menuOpen ? <X /> : <Menu />}
         </button>
