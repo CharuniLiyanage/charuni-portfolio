@@ -11,7 +11,7 @@ import {
 
 function Hero() {
   const titles = [
-    "Aspiring Software Engineer Intern",
+    "Aspiring Software Engineer",
   ];
 
   const [displayText, setDisplayText] = useState("");
