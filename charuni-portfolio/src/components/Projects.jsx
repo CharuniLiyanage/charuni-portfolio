@@ -32,7 +32,7 @@ const projects = [
   {
     title: "CODEVERSE",
     category: "AI-Powered Full-Stack Web Application",
-    status: "Ongoing & Deployed",
+    status: "Ongoing",
     statusType: "ongoing",
     description:
       "A personal full-stack development project focused on creating an AI-powered programming learning platform. Designed to help learners explore programming courses, understand code through AI-powered explanations, practice in interactive coding environments, and track their learning progress. Includes secure authentication and personalized learning dashboards.",
@@ -49,10 +49,10 @@ const projects = [
     ],
     image: "images/codeverse.png",
     links: [
-      {
-        label: "Live Website",
-        url: "https://codeverse-olive-three.vercel.app/",
-      },
+      // {
+      //   label: "Live Website",
+      //   url: "https://codeverse-olive-three.vercel.app/",
+      // },
       {
         label: "GitHub",
         url: "https://github.com/codeverse-learning/",
