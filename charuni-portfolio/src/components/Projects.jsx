@@ -28,6 +28,38 @@ const projects = [
       },
     ],
   },
+
+  {
+    title: "CODEVERSE",
+    category: "AI-Powered Full-Stack Web Application",
+    status: "Ongoing & Deployed",
+    statusType: "ongoing",
+    description:
+      "A personal full-stack development project focused on creating an AI-powered programming learning platform. Designed to help learners explore programming courses, understand code through AI-powered explanations, practice in interactive coding environments, and track their learning progress. Includes secure authentication and personalized learning dashboards.",
+    technologies: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Java",
+      "Spring Boot",
+      "MongoDB",
+      "REST APIs",
+      "JWT",
+      "Google OAuth",
+    ],
+    image: "images/codeverse.png",
+    links: [
+      {
+        label: "Live Website",
+        url: "https://codeverse-olive-three.vercel.app/",
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/codeverse-learning/",
+      },
+    ],
+  },
+
   {
     title: "Government Hospital Appointment Booking System",
     category: "Web Application",
@@ -48,6 +80,7 @@ const projects = [
       },
     ],
   },
+
   {
     title: "SolarIQ",
     category: "Final Year Group Project",
@@ -71,13 +104,14 @@ const projects = [
       },
     ],
   },
+
   {
     title: "HEC Awareness and Alert Application",
     category: "Desktop Application | University OOP Group Project",
     status: "Group Project",
     statusType: "group",
     description:
-    "A university group project developed as a desktop application to support human-elephant conflict awareness through map-based alerts, electric fence updates, incident reporting, and injured elephant reporting.",
+      "A university group project developed as a desktop application to support human-elephant conflict awareness through map-based alerts, electric fence updates, incident reporting, and injured elephant reporting.",
     technologies: ["Java Swing", "SQL", "Spring Boot"],
     image: "images/hec.png",
     links: [
@@ -95,6 +129,7 @@ const projects = [
       },
     ],
   },
+
   {
     title: "Learning Management System (LMS)",
     category: "Web Application",
@@ -111,6 +146,7 @@ const projects = [
       },
     ],
   },
+
   {
     title: "Royal Invites",
     category: "Wedding Invitation Maker",
@@ -141,6 +177,7 @@ const projects = [
       },
     ],
   },
+
   {
     title: "Restaurant App",
     category: "Frontend Web Application",
@@ -161,6 +198,7 @@ const projects = [
       },
     ],
   },
+
   {
     title: "University GPA Calculator",
     category: "Web Application",
